@@ -7,6 +7,9 @@ _dev/
 # Files
 .DS_Store
 Cargo.lock
+PARITY_ANALYSIS.md
+STATUS_SUMMARY.md
+
 
 # Agentic
 .claude
