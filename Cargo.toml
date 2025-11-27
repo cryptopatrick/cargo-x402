@@ -1,10 +1,9 @@
 [package]
 name = "cargo-x402"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["CryptoPatrick <cryptopatrick@gmail.com>"]
-
-description = "Scaffold x402 projects from pluggable templates via GitHub topics."
+description = "Scaffold x402 projects from official templates."
 documentation = "https://docs.rs/cargo-x402"
 homepage = "https://github.com/cryptopatrick/cargo-x402"
 repository = "https://github.com/cryptopatrick/cargo-x402"
