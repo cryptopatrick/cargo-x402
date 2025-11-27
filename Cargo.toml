@@ -1,20 +1,68 @@
 [package]
 name = "cargo-x402"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 authors = ["CryptoPatrick <cryptopatrick@gmail.com>"]
 
-###############################################################################
-description = "Scaffold x402 projects."
+description = "Scaffold x402 projects from pluggable templates via GitHub topics."
 documentation = "https://docs.rs/cargo-x402"
 homepage = "https://github.com/cryptopatrick/cargo-x402"
 repository = "https://github.com/cryptopatrick/cargo-x402"
 readme = "README.md"
-keywords = ["x402"]
+keywords = ["x402", "payments", "scaffold", "template"]
 categories = ["command-line-interface", "command-line-utilities"]
 license = "MIT"
-autotests = false
 
-###############################################################################
+[[bin]]
+name = "cargo-x402"
+path = "src/main.rs"
+
 [dependencies]
-clap = { version = "4", features = ["derive"] }
+# CLI & Arguments
+clap = { version = "4.4", features = ["derive"] }
+
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+serde_json = "1.0"
+
+# HTTP Client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Template rendering
+liquid = "0.26"
+
+# User interaction
+dialoguer = "0.11"
+indicatif = "0.17"
+colored = "2.1"
+
+# File system & paths
+walkdir = "2.4"
+glob = "0.3"
+zip = "0.6"
+tempfile = "3.8"
+
+# Validation & patterns
+regex = "1.10"
+semver = "1.0"
+
+# Date/time
+chrono = { version = "0.4", features = ["serde"] }
+
+# User information
+whoami = "1.4"
+
+# Directory handling
+dirs = "5.0"
+
+# Error handling & logging
+anyhow = "1.0"
+thiserror = "1.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+mockito = "1.2"
