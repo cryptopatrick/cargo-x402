@@ -1,0 +1,27 @@
+[package]
+name = "cargo-x402"
+version = "0.1.0"
+edition = "2024"
+authors = ["CryptoPatrick <cryptopatrick@gmail.com>"]
+
+###############################################################################
+description = "Scaffold x402 projects."
+documentation = "https://docs.rs/cargo-x402"
+homepage = "https://github.com/cryptopatrick/cargo-x402"
+repository = "https://github.com/cryptopatrick/cargo-x402"
+readme = "README.md"
+keywords = ["<KEYWORD1>", "<KEYWORD2>" ]
+license = "MIT"
+autotests = false
+
+###############################################################################
+[lib]
+name = "cargo-x402"
+path = "src/lib.rs"
+
+[[test]]
+name = "tests"
+path = "tests/test.rs"
+
+###############################################################################
+[dependencies]
