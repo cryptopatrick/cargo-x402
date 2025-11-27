@@ -10,18 +10,11 @@ documentation = "https://docs.rs/cargo-x402"
 homepage = "https://github.com/cryptopatrick/cargo-x402"
 repository = "https://github.com/cryptopatrick/cargo-x402"
 readme = "README.md"
-keywords = ["<KEYWORD1>", "<KEYWORD2>" ]
+keywords = ["x402"]
+categories = ["command-line-interface", "command-line-utilities"]
 license = "MIT"
 autotests = false
 
 ###############################################################################
-[lib]
-name = "cargo-x402"
-path = "src/lib.rs"
-
-[[test]]
-name = "tests"
-path = "tests/test.rs"
-
-###############################################################################
 [dependencies]
+clap = { version = "4", features = ["derive"] }
