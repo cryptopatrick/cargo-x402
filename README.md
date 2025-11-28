@@ -22,8 +22,8 @@
   <a href="https://crates.io/crates/cargo-x402" target="_blank">
     <img src="https://img.shields.io/crates/d/cargo-x402.svg" alt="Downloads"/>
   </a>
-  <a href="https://github.com/xForth/cargo-x402/actions" target="_blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/xForth/cargo-x402/test.yml" alt="CI Status"/>
+  <a href="https://github.com/cryptopatrick/cargo-x402/actions" target="_blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/cryptopatrick/cargo-x402/test.yml" alt="CI Status"/>
   </a>
   <a href="https://docs.rs/cargo-x402" target="_blank">
     <img src="https://docs.rs/cargo-x402/badge.svg" alt="Documentation"/>
@@ -333,7 +333,7 @@ cargo install cargo-x402
 Or build from source:
 
 ```bash
-git clone https://github.com/xForth/cargo-x402.git
+git clone https://github.com/cryptopatrick/cargo-x402.git
 cd cargo-x402
 cargo install --path .
 ```
@@ -489,31 +489,31 @@ See [TEMPLATE_AUTHOR_GUIDE.md](./TEMPLATE_AUTHOR_GUIDE.md) for:
 ### For Developers
 
 - **[API Documentation](https://docs.rs/cargo-x402)** - Full Rustdoc reference
-- **GitHub Repository** - [xForth/cargo-x402](https://github.com/xForth/cargo-x402)
+- **GitHub Repository** - [cryptopatrick/cargo-x402](https://github.com/cryptopatrick/cargo-x402)
 - **Official Templates** - [xForth Templates](https://github.com/xForth)
 
 ## 🗺️ Roadmap
 
-### v1.0.0 ✅ (Current - Production Ready)
+### v0.5.0 ✅ (Current : Production Ready)
 - [x] Stable public API
 - [x] 5 official maintained templates
 - [x] Comprehensive test coverage (208+ tests)
 - [x] Full documentation and guides
 - [x] Multi-platform support (macOS, Linux, Windows)
 
-### v1.1.0 (Q1 2025)
+### v0.6.0 (Work on this will start in december)
 - [ ] Enhanced template caching and offline mode
 - [ ] Template repository metadata indexing
 - [ ] Improved parameter validation with custom validators
 - [ ] Template dependency resolution
 
-### v1.2.0 (Q2 2025)
+### v0.7.0
 - [ ] Local template support (non-GitHub templates)
 - [ ] Custom template hooks (pre/post generation)
 - [ ] Private repository template support
 - [ ] Performance profiling and optimization
 
-### v2.0.0 (Q3-Q4 2025)
+### v0.8.0
 - [ ] Official template marketplace/registry
 - [ ] IDE integrations (VS Code, IntelliJ)
 - [ ] Template signing and verification
@@ -528,7 +528,7 @@ See [TEMPLATE_AUTHOR_GUIDE.md](./TEMPLATE_AUTHOR_GUIDE.md) for:
 **Star** ⭐ this project if you find it useful!
 
 ### Report Issues
-- [Open GitHub Issue](https://github.com/xForth/cargo-x402/issues)
+- [Open GitHub Issue](https://github.com/cryptopatrick/cargo-x402/issues)
 - Include: command, error message, OS/Rust version
 
 ### Get Help
@@ -563,7 +563,7 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 <p align="center">
   Made with ❤️ by <a href="https://x.com/cryptopatrick">CryptoPatrick</a> & <a href="https://github.com/xForth">xForth</a>
   <br>
-  <a href="https://github.com/xForth/cargo-x402">GitHub</a> •
+  <a href="https://github.com/cryptopatrick/cargo-x402">GitHub</a> •
   <a href="https://crates.io/crates/cargo-x402">Crates.io</a> •
   <a href="https://docs.rs/cargo-x402">Docs.rs</a>
 </p>
