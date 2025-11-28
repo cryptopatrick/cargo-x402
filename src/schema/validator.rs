@@ -197,64 +197,6 @@ impl Validator {
         Ok(())
     }
 
-    /// Check if a template meets version requirements
-    pub fn check_version_requirements(
-        schema: &TemplateSchema,
-        rust_version: &str,
-        cli_version: &str,
-    ) -> Result<()> {
-        // Check Rust version
-        if let Some(ref required) = schema.template.min_rust_version {
-            let required_ver = Version::parse(required)
-                .map_err(|_| Error::ValidationError {
-                    field: "min_rust_version".to_string(),
-                    message: format!("Invalid version in template: {}", required),
-                })?;
-
-            let current_ver = Version::parse(rust_version)
-                .map_err(|_| Error::ValidationError {
-                    field: "rust_version".to_string(),
-                    message: format!("Invalid Rust version: {}", rust_version),
-                })?;
-
-            if current_ver < required_ver {
-                return Err(Error::ValidationError {
-                    field: "rust_version".to_string(),
-                    message: format!(
-                        "Template requires Rust {} or later, but you have {}",
-                        required, rust_version
-                    ),
-                });
-            }
-        }
-
-        // Check CLI version
-        if let Some(ref required) = schema.template.min_x402_cli_version {
-            let required_ver = Version::parse(required)
-                .map_err(|_| Error::ValidationError {
-                    field: "min_x402_cli_version".to_string(),
-                    message: format!("Invalid version in template: {}", required),
-                })?;
-
-            let current_ver = Version::parse(cli_version)
-                .map_err(|_| Error::ValidationError {
-                    field: "cli_version".to_string(),
-                    message: format!("Invalid CLI version: {}", cli_version),
-                })?;
-
-            if current_ver < required_ver {
-                return Err(Error::ValidationError {
-                    field: "cli_version".to_string(),
-                    message: format!(
-                        "Template requires cargo-x402 {} or later, but you have {}",
-                        required, cli_version
-                    ),
-                });
-            }
-        }
-
-        Ok(())
-    }
 }
 
 #[cfg(test)]

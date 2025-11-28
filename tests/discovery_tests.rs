@@ -113,21 +113,17 @@ fn test_template_sorting_by_stars() {
 fn test_template_filtering_by_tags() {
     #[derive(Clone)]
     struct Template {
-        name: String,
         tags: Vec<String>,
     }
 
     let templates = vec![
         Template {
-            name: "API Template".to_string(),
             tags: vec!["axum".to_string(), "api".to_string()],
         },
         Template {
-            name: "CLI Template".to_string(),
             tags: vec!["clap".to_string(), "cli".to_string()],
         },
         Template {
-            name: "Full-Stack".to_string(),
             tags: vec!["axum".to_string(), "react".to_string()],
         },
     ];

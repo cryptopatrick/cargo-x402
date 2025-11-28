@@ -1,7 +1,6 @@
 //! Tests for command implementations
 //! Tests the list and create command logic
 
-use cargo_x402::error::{Error, Result};
 use std::path::PathBuf;
 use tempfile::TempDir;
 

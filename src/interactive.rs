@@ -192,6 +192,7 @@ pub fn print_success(message: &str) {
 }
 
 /// Display an error message
+#[allow(dead_code)] // Intentionally public for library users
 pub fn print_error(message: &str) {
     println!("{} {}", "❌".red(), message.red());
 }

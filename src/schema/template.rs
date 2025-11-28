@@ -87,24 +87,6 @@ pub enum Parameter {
 }
 
 impl Parameter {
-    /// Get the default value as a string
-    pub fn default_value(&self) -> String {
-        match self {
-            Parameter::String { default, .. } => default.clone(),
-            Parameter::Boolean { default, .. } => default.to_string(),
-            Parameter::Enum { default, .. } => default.clone(),
-        }
-    }
-
-    /// Get parameter description if available
-    pub fn description(&self) -> Option<&str> {
-        match self {
-            Parameter::String { description, .. } => description.as_deref(),
-            Parameter::Boolean { description, .. } => description.as_deref(),
-            Parameter::Enum { description, .. } => description.as_deref(),
-        }
-    }
-
     /// Validate a value against this parameter's constraints
     pub fn validate(&self, value: &str) -> Result<(), String> {
         match self {
@@ -155,18 +137,6 @@ pub struct FileRules {
     pub exclude: Vec<String>,
 }
 
-impl FileRules {
-    /// Get default file rules (exclude common directories)
-    pub fn default_excludes() -> Vec<String> {
-        vec![
-            "target/**/*".to_string(),
-            ".git/**/*".to_string(),
-            "*.log".to_string(),
-            "node_modules/**/*".to_string(),
-            ".DS_Store".to_string(),
-        ]
-    }
-}
 
 #[cfg(test)]
 mod tests {

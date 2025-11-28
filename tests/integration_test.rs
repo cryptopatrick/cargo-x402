@@ -3,7 +3,6 @@
 /// Tests the full workflow of template discovery, validation, and rendering
 
 use std::fs;
-use std::path::PathBuf;
 use tempfile::TempDir;
 
 #[test]

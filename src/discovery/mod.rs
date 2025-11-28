@@ -39,7 +39,6 @@ pub mod github;
 pub use github::GitHubDiscovery;
 pub use cache::Cache;
 
-use crate::error::Result;
 use serde::{Deserialize, Serialize};
 
 /// Information about a discoverable template from GitHub.
@@ -76,6 +75,7 @@ pub struct TemplateInfo {
 
 impl TemplateInfo {
     /// Get shorthand reference (owner/repo)
+    #[allow(dead_code)] // Intentionally public for library users
     pub fn shorthand(&self) -> String {
         format!("{}/{}", self.owner, self.repo)
     }
@@ -87,13 +87,4 @@ impl TemplateInfo {
         }
         tags.iter().any(|tag| self.topics.contains(tag))
     }
-}
-
-/// Template discovery trait
-pub trait Discoverer: Send + Sync {
-    /// Discover all x402 templates
-    fn discover(&self) -> Result<Vec<TemplateInfo>>;
-
-    /// Get information about a specific template
-    fn get_template(&self, shorthand: &str) -> Result<Option<TemplateInfo>>;
 }

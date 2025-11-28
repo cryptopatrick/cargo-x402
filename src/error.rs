@@ -54,6 +54,7 @@ use std::fmt;
 /// Each variant includes appropriate context and helpful error messages
 /// for users to understand what went wrong and how to fix it.
 #[derive(Debug)]
+#[allow(dead_code)] // Variants are part of public API for future use
 pub enum Error {
     /// Template not found in discovery results
     TemplateNotFound(String),

@@ -1,8 +1,6 @@
 //! Critical integration tests for cargo-x402
 //! Tests end-to-end template creation and error scenarios
 
-use cargo_x402::error::Error;
-use std::path::PathBuf;
 use tempfile::TempDir;
 
 // ===== END-TO-END TEMPLATE CREATION TESTS =====

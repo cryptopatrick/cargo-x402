@@ -53,12 +53,6 @@ impl Cache {
         })
     }
 
-    /// Create cache with custom TTL
-    pub fn with_ttl(ttl_hours: i64) -> Result<Self> {
-        let cache_dir = Self::cache_directory()?;
-        Ok(Self { cache_dir, ttl_hours })
-    }
-
     /// Get cache directory path
     fn cache_directory() -> Result<PathBuf> {
         let cache_dir = dirs::cache_dir()
@@ -111,16 +105,6 @@ impl Cache {
         std::fs::write(&cache_path, content)
             .map_err(|e| Error::CacheError(format!("Cannot write cache: {}", e)))?;
 
-        Ok(())
-    }
-
-    /// Clear the cache
-    pub fn clear(&self) -> Result<()> {
-        let cache_path = self.cache_file_path();
-        if cache_path.exists() {
-            std::fs::remove_file(&cache_path)
-                .map_err(|e| Error::CacheError(format!("Cannot delete cache: {}", e)))?;
-        }
         Ok(())
     }
 

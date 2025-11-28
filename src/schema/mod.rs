@@ -45,5 +45,6 @@
 pub mod template;
 pub mod validator;
 
+#[allow(unused_imports)] // Intentionally exported for library users
 pub use template::{Parameter, TemplateMetadata, TemplateSchema};
 pub use validator::Validator;
