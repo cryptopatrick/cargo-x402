@@ -3,15 +3,18 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-/// Complete x402 template schema
+/// Complete x402 template schema from x402.toml.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TemplateSchema {
+    /// Template metadata section
     pub template: TemplateMetadata,
+    /// Customizable parameters for template rendering
     pub parameters: Option<HashMap<String, Parameter>>,
+    /// File inclusion/exclusion rules
     pub files: Option<FileRules>,
 }
 
-/// Template metadata from [template] section
+/// Template metadata from `[template]` section of x402.toml.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TemplateMetadata {
     /// Human-readable template name
@@ -42,16 +45,19 @@ pub struct TemplateMetadata {
     pub min_x402_cli_version: Option<String>,
 }
 
-/// Parameter definition for template customization
+/// Parameter definition for template customization.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "type", rename_all = "lowercase")]
 pub enum Parameter {
     /// String parameter with optional pattern validation
     #[serde(rename = "string")]
     String {
+        /// Default value for this parameter
         default: String,
+        /// Regex pattern for validation (optional)
         #[serde(default)]
         pattern: Option<String>,
+        /// Description of the parameter
         #[serde(default)]
         description: Option<String>,
     },
@@ -59,7 +65,9 @@ pub enum Parameter {
     /// Boolean parameter
     #[serde(rename = "boolean")]
     Boolean {
+        /// Default value (true or false)
         default: bool,
+        /// Description of the parameter
         #[serde(default)]
         description: Option<String>,
     },
@@ -67,9 +75,12 @@ pub enum Parameter {
     /// Enumeration parameter with fixed choices
     #[serde(rename = "enum")]
     Enum {
+        /// Allowed values for this parameter
         #[serde(rename = "enum")]
         choices: Vec<String>,
+        /// Default choice
         default: String,
+        /// Description of the parameter
         #[serde(default)]
         description: Option<String>,
     },
@@ -132,7 +143,7 @@ impl Parameter {
     }
 }
 
-/// File inclusion/exclusion rules from [files] section
+/// File inclusion/exclusion rules from `[files]` section of x402.toml.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct FileRules {
     /// Glob patterns of files to include
