@@ -63,7 +63,6 @@
     <li><a href="#-what-is-cargo-x402"> What is cargo-x402</a>
       <ul>
         <li><a href="#use-cases"> Use Cases</a></li>
-        <li><a href="#how-it-works"> How It Works</a></li>
       </ul>
     </li>
     <li><a href="#-features"> Features</a>
@@ -73,6 +72,7 @@
         <li><a href="#-developer-experience">Developer Experience</a></li>
       </ul>
     </li>
+    <li><a href="#-architecture"> Architecture</a></li>
     <li><a href="#-quick-start"> Quick Start</a></li>
     <li><a href="#-templates"> Official Templates</a></li>
     <li><a href="#-documentation"> Documentation</a></li>
@@ -99,7 +99,7 @@ Instead of manually setting up boilerplate code, copying files, and configuring 
 - **CLI Tools**: Create command-line utilities with proper argument parsing
 - **Microservices**: Deploy production-ready services with observability built-in
 
-### How It Works
+## 📐 Architecture
 
 1. 🔄 **Overall Workflow**
 
