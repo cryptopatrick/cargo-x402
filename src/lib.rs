@@ -44,4 +44,5 @@ pub mod interactive;
 pub mod schema;
 pub mod template;
 
+/// The version of cargo-x402 being used
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");

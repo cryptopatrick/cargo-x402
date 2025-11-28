@@ -62,7 +62,12 @@ pub enum Error {
     InvalidSchema(String),
 
     /// Field validation error
-    ValidationError { field: String, message: String },
+    ValidationError {
+        /// The name of the field that failed validation
+        field: String,
+        /// The validation error message
+        message: String,
+    },
 
     /// Network-related error
     NetworkError(String),
