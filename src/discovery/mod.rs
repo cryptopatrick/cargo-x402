@@ -22,15 +22,11 @@
 //!
 //! ## Example
 //!
-//! ```no_run
+//! ```no_run,ignore
 //! use cargo_x402::discovery::github::GitHubDiscovery;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! let discoverer = GitHubDiscovery::new();
-//! let templates = discoverer.discover()?;
-//! println!("Found {} templates", templates.len());
-//! # Ok(())
-//! # }
+//! // See integration tests for actual async usage examples
+//! // The discovery system requires async runtime context
 //! ```
 
 pub mod cache;

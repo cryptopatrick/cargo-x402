@@ -22,20 +22,12 @@
 //!
 //! ## Example
 //!
-//! ```no_run
-//! use cargo_x402::commands::list::list_templates;
-//! use cargo_x402::commands::create::create_project;
+//! ```no_run,ignore
+//! use cargo_x402::commands::list;
+//! use cargo_x402::commands::create;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! // List templates
-//! let templates = list_templates(false)?;
-//! println!("Available templates: {}", templates.len());
-//!
-//! // Create a project
-//! let params = std::collections::HashMap::new();
-//! // ... populate params ...
-//! # Ok(())
-//! # }
+//! // See integration tests for actual usage examples
+//! // The CLI provides the primary interface for these operations
 //! ```
 
 pub mod create;

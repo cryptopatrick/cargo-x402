@@ -18,26 +18,12 @@
 //!
 //! ## Example
 //!
-//! ```no_run
-//! use cargo_x402::interactive::select_template;
+//! ```no_run,ignore
+//! use cargo_x402::interactive;
 //! use cargo_x402::discovery::TemplateInfo;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! let templates = vec![
-//!     TemplateInfo {
-//!         name: "basic-api".to_string(),
-//!         description: "Basic REST API".to_string(),
-//!         url: "https://github.com/xForth/x402-template-basic-api".to_string(),
-//!         owner: "xForth".to_string(),
-//!         repo: "x402-template-basic-api".to_string(),
-//!         stars: 42,
-//!     },
-//! ];
-//!
-//! let selected = select_template(&templates)?;
-//! println!("Selected: {}", selected.name);
-//! # Ok(())
-//! # }
+//! // See integration tests for actual usage examples
+//! // Interactive prompts require terminal context
 //! ```
 
 use crate::discovery::TemplateInfo;

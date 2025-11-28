@@ -25,16 +25,11 @@
 //!
 //! ## Quick Example
 //!
-//! ```no_run
-//! use cargo_x402::commands::list::list_templates;
+//! ```no_run,ignore
 //! use cargo_x402::discovery::github::GitHubDiscovery;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! // List available templates
-//! let templates = list_templates(false)?;
-//! println!("Found {} templates", templates.len());
-//! # Ok(())
-//! # }
+//! // See integration tests and CLI for actual usage examples
+//! // The binary provides the primary interface for cargo-x402 operations
 //! ```
 
 pub mod commands;

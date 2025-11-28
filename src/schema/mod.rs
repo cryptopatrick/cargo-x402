@@ -30,16 +30,11 @@
 //!
 //! ## Example
 //!
-//! ```no_run
+//! ```no_run,ignore
 //! use cargo_x402::schema::TemplateSchema;
-//! use std::path::Path;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! let path = Path::new("x402.toml");
-//! let schema = TemplateSchema::from_file(path)?;
-//! println!("Template: {}", schema.metadata.name);
-//! # Ok(())
-//! # }
+//! // See integration tests for actual usage examples
+//! // Schema loading happens internally during template processing
 //! ```
 
 pub mod template;

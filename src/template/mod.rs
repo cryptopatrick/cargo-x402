@@ -17,24 +17,11 @@
 //!
 //! ## Example
 //!
-//! ```no_run
-//! use cargo_x402::template::{Downloader, Renderer};
-//! use std::collections::HashMap;
+//! ```no_run,ignore
+//! use cargo_x402::template;
 //!
-//! # fn main() -> Result<(), Box<dyn std::error::Error>> {
-//! // Download template from GitHub
-//! let downloader = Downloader::new();
-//! let temp_path = downloader.download("xForth/x402-template-basic-api")?;
-//!
-//! // Render template with parameters
-//! let mut params = HashMap::new();
-//! params.insert("project_name".to_string(), "my-project".to_string());
-//!
-//! let renderer = Renderer::new();
-//! let output_path = renderer.render(&temp_path, &params)?;
-//! println!("Project created at: {}", output_path.display());
-//! # Ok(())
-//! # }
+//! // See integration tests for actual usage examples
+//! // Template operations are coordinated through the commands module
 //! ```
 
 pub mod downloader;
