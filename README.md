@@ -48,7 +48,7 @@
 
 ## 🛎 Status
 
-* **v1.0.0** - Production-ready release
+* **v0.5.1** - Beta release
 * **208+ tests** passing across all platforms
 * **5 official templates** included and maintained
 * **Multi-platform support** - macOS, Linux, Windows
